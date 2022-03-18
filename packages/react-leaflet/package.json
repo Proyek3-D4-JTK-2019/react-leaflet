@@ -43,7 +43,7 @@
     "umd/*"
   ],
   "dependencies": {
-    "@react-leaflet/core": "^1.1.1"
+    "@react-leaflet/core": "https://gitpkg.now.sh/Proyek3-D4-JTK-2019/react-leaflet/packages/core?es2019-version"
   },
   "peerDependencies": {
     "leaflet": "^1.7.1",
