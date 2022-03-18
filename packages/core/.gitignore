@@ -1,4 +1,4 @@
-/cjs
+# /cjs
 /coverage
-/esm
-/types
+# /esm
+# /types

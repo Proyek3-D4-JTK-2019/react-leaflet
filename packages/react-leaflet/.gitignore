@@ -1,5 +1,5 @@
 /coverage
-/cjs
-/esm
-/types
-/umd
+# /cjs
+# /esm
+# /types
+# /umd
