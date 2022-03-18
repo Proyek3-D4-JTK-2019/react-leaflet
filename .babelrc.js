@@ -1,5 +1,5 @@
 const targets = {
-  node: 'current',
+  node: '12',
   browsers: [
     'last 2 Chrome versions',
     'last 2 Edge versions',
@@ -13,6 +13,7 @@ const targets = {
 
 module.exports = {
   presets: ['@babel/preset-react', '@babel/preset-typescript'],
+  plugins: ['@babel/plugin-proposal-nullish-coalescing-operator'],
   env: {
     development: {
       presets: [

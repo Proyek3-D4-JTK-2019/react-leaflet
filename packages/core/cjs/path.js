@@ -18,7 +18,9 @@ function usePathOptions(element, props) {
   const optionsRef = (0, _react.useRef)();
   (0, _react.useEffect)(function updatePathOptions() {
     if (props.pathOptions !== optionsRef.current) {
-      const options = props.pathOptions ?? {};
+      var _props$pathOptions;
+
+      const options = (_props$pathOptions = props.pathOptions) !== null && _props$pathOptions !== void 0 ? _props$pathOptions : {};
       element.instance.setStyle(options);
       optionsRef.current = options;
     }

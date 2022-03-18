@@ -16,12 +16,14 @@ var _pane = require("./pane");
 
 function useLayerLifecycle(element, context) {
   (0, _react.useEffect)(function addLayer() {
-    const container = context.layerContainer ?? context.map;
+    var _context$layerContain;
+
+    const container = (_context$layerContain = context.layerContainer) !== null && _context$layerContain !== void 0 ? _context$layerContain : context.map;
     container.addLayer(element.instance);
     return function removeLayer() {
-      var _context$layerContain;
+      var _context$layerContain2;
 
-      (_context$layerContain = context.layerContainer) == null ? void 0 : _context$layerContain.removeLayer(element.instance);
+      (_context$layerContain2 = context.layerContainer) == null ? void 0 : _context$layerContain2.removeLayer(element.instance);
       context.map.removeLayer(element.instance);
     };
   }, [context, element]);

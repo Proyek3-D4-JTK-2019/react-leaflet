@@ -586,7 +586,7 @@
     } : null, [map]);
     const contents = context ? /*#__PURE__*/React__default["default"].createElement(LeafletProvider, {
       value: context
-    }, children) : placeholder ?? null;
+    }, children) : placeholder !== null && placeholder !== void 0 ? placeholder : null;
     return /*#__PURE__*/React__default["default"].createElement("div", _extends({}, props, {
       ref: mapRef
     }), contents);
@@ -641,6 +641,8 @@
   }
 
   function createPane(props, context) {
+    var _props$pane;
+
     const name = props.name;
 
     if (DEFAULT_PANES.indexOf(name) !== -1) {
@@ -651,7 +653,7 @@
       throw new Error(`A pane with this name already exists: ${name}`);
     }
 
-    const parentPaneName = props.pane ?? context.pane;
+    const parentPaneName = (_props$pane = props.pane) !== null && _props$pane !== void 0 ? _props$pane : context.pane;
     const parentPane = parentPaneName ? context.map.getPane(parentPaneName) : undefined;
     const element = context.map.createPane(name, parentPane);
 
